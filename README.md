@@ -8,6 +8,9 @@ Die Datei die ihr sucht, heißt `main.pdf`.
 
 ## Wie kann ich mir dein Zeug herunterladen?
 
+### Hinweis
+Ignoriert die anderen PDF-Dateien. Die sind nur Einzelstücke von der `main.pdf`.
+
 ### Nur die PDF
 1. Auf die `main.pdf` draufdrücken.
 2. Ein bisschen oben rechts sollte der Button `Download` sein. Da einfach
