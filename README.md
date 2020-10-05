@@ -1,7 +1,6 @@
-## Advice
+# Advice -- IMPORTANT FOR EVERYONE
 
-This repo includes my chemic notes for **my classmates (from germany)** so I
-won't translate it into another language, sorry.
+## This repo includes my chemic notes for my classmates (from germany) so I won't translate it into another language, sorry.
 
 #### Wo ist die Datei? (Dein "Aufschrieb")
 
