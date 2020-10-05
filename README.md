@@ -9,6 +9,16 @@ Die Datei die ihr sucht, heißt `main.pdf`.
 
 ## Wie kann ich mir dein Zeug herunterladen?
 
+### Nur die PDF
+1. Auf die `main.pdf` draufdrücken.
+2. Ein bisschen oben rechts sollte der Button `Download` sein. Da einfach
+   draufdrücken und herunterladen.
+
+Wer's nicht finden konnte, hier ein GIF:
+![PDF_download](PDF_download.gif)
+
+### Alles herunterladen
+
 Hier die Anleitung in Worten:
 
 1. Auf den grünen Knopf "Code" drücken.
@@ -36,7 +46,7 @@ Diese Schritte müsstet ihr machen:
 2. Guckt zuerst nach, ob schon ein Issue offen ist, welches den gleichen Inhalt
    hat, wie eure Nachricht.
 3. Wenn es so einen Issue schon gibt, dann könnt ihr wieder zurück gehen und
-   hoffen, dass dieser gefixt wird. Ansonsten geht ihr auf den grünen Knopf 
+   hoffen, dass dieser gefixt wird. Ansonsten geht ihr auf den grünen Knopf
    `New issue`.
 4. Dort könnt ihr dann ein Issue auswählen. Je nachdem was ihr sagen wollt.
    **(Bitte die Felder ausfüllen!)**
@@ -64,9 +74,9 @@ eigentlich getrost ignorieren.
 ### Reinschreiben
 
 Diesen Aufschrieb habe ich mit [LaTeX](https://www.latex-project.org/) (nein,
-nicht diese Gummi-Kleidung oder was auch immer das ist, lol) geschrieben. 
-Auch wenn es verdammt lange ist, wäre 
-[dieses Video](https://www.youtube.com/watch?v=VhmkLrOjLsw) ein guter Crash-Kurs 
+nicht diese Gummi-Kleidung oder was auch immer das ist, lol) geschrieben.
+Auch wenn es verdammt lange ist, wäre
+[dieses Video](https://www.youtube.com/watch?v=VhmkLrOjLsw) ein guter Crash-Kurs
 zu LaTeX.
 
 ### Editor und Packet
