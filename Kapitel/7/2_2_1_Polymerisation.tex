@@ -593,8 +593,9 @@ werden. (Die Kette von der Gesamtreaktion)
                         -[6,1.5]{CH}
                             -[4]\Charge{180=\, \ldots}{\vphantom{C}}
                         -{CH}
-                            ( -[6]{CH}
-                                -[6]C
+                        -{CH}
+                            ( 
+                                -[6,1.5]C
                                 	( -[8]H)
                                     ( -[4]**6(------))
                                 -[6]C
@@ -647,6 +648,7 @@ werden. (Die Kette von der Gesamtreaktion)
                 \chemname{
                     \chemfig{
                         % first
+                        \ldots
                         -[@{l1}0]C
                         	( -[2]H)
                         	( -[-2]H)
@@ -675,6 +677,7 @@ werden. (Die Kette von der Gesamtreaktion)
                         	( -[2]H)
                         	( -[-2]H)
                         -[@{r3}]
+                        \Charge{0=\, \ldots}{\vphantom{C}}
                     }
                     \polymerdelim[delimiters={[]}, height=45pt, depth=45pt, indice=n]{l1}{r1}
                     \polymerdelim[delimiters={[]}, height=45pt, depth=45pt, indice=m]{l2}{r2}
