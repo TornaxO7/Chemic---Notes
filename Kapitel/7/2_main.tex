@@ -1,0 +1,686 @@
+\documentclass[../../main.tex]{subfiles}
+\begin{document}
+\subsection{Kunststofftypen}
+%------------------
+\subsubsection{Thermoplaste}
+%------------------
+% Eigenschaften
+\underline{Eigenschaften:}
+\begin{itemize}
+    \item Werden beim \textit{erwärmen} \textbf{leicht} oder \textbf{schmelzen}.
+    \item Lösen sich teilweise in Aceton oder quellen (aufquellen).
+\end{itemize}
+%------------------
+Vorteile:
+\begin{itemize}
+    \item Gute Verarbeitungsmöglichkeiten:\\
+        Schmelzen, dann pressen, spritzen, gießen (und extruhieren: Form auspressen(?))
+    \item Gute Wiederverwertbarkeit: \\
+        Einschmelzen der sortenreinen Kunststoffe.
+\end{itemize}
+%------------------
+\underline{Skizze:}
+\begin{figure}[ht]
+    \centering
+    \incfig{skizze_thermoplaste}
+    \caption{Skizze von Thermoplaste}
+    \label{fig:skizze_thermoplaste}
+\end{figure}
+\\
+\underline{Erklärung:} \\
+Sie bestehen aus linearen oder wenig verzweigten Makromolekülen und beim
+erwärmen werden die Zwischenmolekularenkrüfte teilweise überwunden. \\
+Die Ketten können aneinander vorbei gleiten. \\
+Manche Lösungsmittel können sich zwischen den Ketten schieben $\rightarrow$
+Kunststoff quillt auf oder löst sich auf.
+%------------------
+\subsubsection{Duroplaste, 21.09.2020}
+Eigenschaften:
+\begin{itemize}
+    \item Zersetzen sich beim erwärmen, ohne zu schmelzen.
+    \item unlöslich in Lösungsmitteln.
+    \item Formbeständiger und widerstandsfähiger Kunststoff, \textbf{aber}:
+        \begin{itemize}
+            \item Schwer recyclebar
+            \item schwer zu verarbeiten: Werkstücke müssen in der Form
+                synthetisiert werden, anschließend nur mechanische Bearbeitung
+                (Bohren, Sägen, Schleifen, Steckdosenabdeckung, etc.)
+        \end{itemize}
+\end{itemize}
+\underline{Skizze:}
+\begin{figure}[ht]
+    \centering
+    \incfig{skizze_duroplaste}
+    \caption{Dreidimensionales Netz}
+    \label{fig:skizze_duroplaste}
+\end{figure}
+%
+\\
+\underline{Erklärung:}
+\begin{itemize}
+    \item Duroplaste bestehen aus stark verzweigten Ketten, beim starkem
+        erhitzen werden Atombindungen aufgebrochen $\rightarrow$ Der Stoff
+        zersetzt sich. 
+    \item  Manche Lösungsmittel schieben sich in das Netz, sodass manche
+        Duroplaste aufquellen können.
+\end{itemize}
+%------------------
+\subsubsection{Elastomere}
+\underline{Eigenschaften:}
+\begin{itemize}
+    \item Biegbar/Elastisch und ist reversible (springt zurück in seine ursprüngliche Form)
+    \item Beim erhitzen zersetzen ohne zu schmelzen.
+\end{itemize}
+%--
+\newpage
+\underline{Skizze:}
+\begin{figure}[ht]
+    \centering
+    \incfig{skizze_elastomere}
+    \caption{Skizze Elastomere}
+    \label{fig:skizze_elastomere}
+\end{figure}
+%
+\\
+\underline{Erklärung:}
+\\
+Elastomere bestehen aus weitmaschtigen Makromolekülen. (Rest ist gleich wie Duroplaste)
+%------------------
+\newpage
+\subsection{Herstellung von Kunststoffen}
+\subsubsection{Polymerisation}
+\underline{Versuch:} Herstellung von Polysterol\\
+Skizze:
+\begin{figure}[h]
+    \centering
+    \incfig{skizze-polymerisation}
+    \caption{Skizze Polymerisation}
+    \label{fig:skizze-polymerisation}
+\end{figure}
+\\
+\underline{Beobachtung:}
+\begin{itemize}
+    \item Sidet beim erhitzen (auch wenn die Flamme weggenommen wird)
+    \item Viskosität nimmt zu
+    \item Schäumt beim siden
+    \item aufsteigende Dämpfe, Kondensierun im Steigrohr
+\end{itemize}
+\underline{Definition:} Polymerisation \\
+Verknüpfen kleiner Molekülen mit Doppelbindung zu einem Makromoleküle unter
+Verlust der Doppelbindung.\\
+%
+
+\underline{Gesamtreaktion:}
+\begin{align*}
+    \schemestart
+        \chemfig{
+            **6(
+                -
+                -
+                -
+                -
+                    (-[2]C
+                        (-[3]H)
+                        (=[0]C
+                            (-[1]H)
+                            (-[7]H)
+                        )
+                    )
+                -
+                -
+            )
+        }
+        \arrow{->}
+        \chemfig{
+            -[@{BL}]
+            -[0]C
+                ( -[6]**6(------))
+                ( -[2]H)
+            -[0]C
+           		( -[2]H)
+           		( -[-2]H)
+                -[@{BR}]
+        }
+        \polymerdelim[delimiters={[]}, height=45pt, depth=120pt,
+        indice=n]{BL}{BR}
+    \schemestop
+\end{align*}
+\textbf{\underline{Reaktionsmechanismus:}}
+\\
+\underline{1. Bildung von Radikalen:}
+\begin{align*}
+    \schemestart
+        \chemname{
+            \chemfig{[:90]
+                **6(
+                    -
+                        (-[0]C
+                        (=[2]\charge{45=\|,135=\|}{O})
+                            (-[0]\charge{90=\|,270=\|}{O}
+                                (-[0]\charge{90=\|,270=\|}{O}
+                                    (-[0]C
+                                        (=[2]\charge{45=\|,135=\|}{O})
+                                        (-**6(------))
+                                    )
+                                )
+                            )
+                        )
+                    -
+                    -
+                    -
+                    -
+                    -
+                )
+            }
+        }
+        {Dibenzoylperoxid}
+    \schemestop
+    \\
+    \schemestart[][west]
+        \arrow{->} 2 \hspace{1mm}
+    \schemestop
+    \schemestart[][west]
+        \chemfig{[:90]
+            **6(
+                -
+                    (-[0]C
+                        (=[2]\charge{45=\|, 135=\|}{O})
+                        (-[0]\charge{0=\., 90=\|, 270=\|}{O})
+                    )
+                -
+                -
+                -
+                -
+                -
+            )
+        }
+    \schemestop
+\end{align*}
+Es spaltet sich auf, weil die Peroxidgruppe sehr instabil ist.
+%
+\\
+\underline{2. Startreaktion}
+\setchemfig{scheme debug=false}
+\begin{align*}  
+    \schemestart[][west]
+    % first molecule
+    \chemfig{[:30]
+            **6(
+                -
+                -
+                    (-[0]C
+                        (=[2]\charge{45=\|, 135=\|}{O})
+                        (-[0]\charge{0=\., 90=\|, 270=\|}{O})
+                    )
+                -
+                -
+                -
+                -
+            )
+        }
+        \arrow{0}[,0]
+        \+{0.5cm, 0.5cm}
+        \arrow{0}[,0]
+        % second molecule
+        \chemfig{
+            H
+            -[7]@{dest1}C
+                (-[6]**6(------))
+            =[@{double} 0]@{dest2}C
+                ( -[1]H)
+                ( -[7]H)
+        }
+    \schemestop
+    % electron arrow
+    \chemmove {
+        \draw[shorten <= 5pt, shorten >= 5pt] (double) .. controls +(270:10mm) and +(180:10mm) .. (dest1);
+        \draw[shorten <= 5pt, shorten >= 5pt] (double) .. controls +(270:10mm) and +(0:10mm) .. (dest2);
+    }
+    \\
+    \schemestart
+        \arrow{->}
+    \schemestop
+    % product
+    \underbrace{
+        \schemestart
+            \chemfig{[:90]
+                **6(
+                    -
+                        (-[0]C
+                            (-[0]\charge{90=\|, 270=\|}{O}
+                                (-[0]C
+                                    (-[0]C)
+                                    (-[2]H)
+                                    (-[6]**6(------))
+                                )
+                            )
+                            (=[2]\charge{45=\|, 135=\|}{O})
+                        )
+                    -
+                    -
+                    -
+                    -
+                    -
+                )
+            }
+        \schemestop
+    }_{R}
+\end{align*}  
+%
+\underline{3. Kettenreaktion/Kettenwachstum:}
+\begin{align*}
+    \schemestart
+        % educt
+        R \+{0.5cm, 0.5cm}
+        \arrow{0}[,0]
+        % educt
+        \chemfig{
+            H 
+            -[7]C
+                ( -[6]**6(------))
+            =[0]C
+                ( -[1]H)
+                ( -[7]H)
+        }
+        \arrow
+        % product
+        \chemfig{
+            R
+            -[0]C
+                ( -[2]H)
+                ( -[6]**6(------))
+            -[0]\charge{0=\.}{C}
+                ( -[2]H)
+                ( -[6]H)
+        }
+    \schemestop
+\end{align*}
+%
+\underline{4. Kettenabbruch:} \\
+Verschiedene Möglickeiten, z.B. Rekombination:
+\begin{align*}
+    \schemestart
+        % educt 1
+        \chemfig{
+            R_{1}
+            -C
+                ( -[2]H)
+                ( -[6]**6(------))
+            -\charge{0=\.}{C}
+                ( -[2]H)
+                ( -[6]H)
+        }
+        % ----
+        \arrow{0}[,0]
+        \+{1cm, 1cm}
+        \arrow{0}[,0]
+        % ----
+        % educt 2
+        \chemfig{
+            \charge{180=\.}{C}
+                ( -[2]H)
+                ( -[6]H)
+            -C
+                ( -[2]H)
+                ( -[6]**6(------))
+            -R_{2}
+        }
+        % ----
+        \arrow
+        % ----
+        \chemfig{
+            R_{1}
+            -C
+                ( -[2]H)
+                ( -[6]**6(------))
+            -C
+                ( -[2]H)
+                ( -[6]H)
+            -C
+                ( -[2]H)
+                ( -[6]H)
+            -C
+                ( -[2]H)
+                ( -[6]**6(------))
+            -R_{2}
+        }
+    \schemestop
+\end{align*}
+%
+Dibenzoylperoxid ist hier Starter, beziehungsweise Radikalbildner und die Zugabe
+von vielen Startern führt zu kürzeren Kettenlängen, da viele Ketten gestartet
+werden. (Die Kette von der Gesamtreaktion)
+%
+
+\underline{Bemerkung / Beispiele zu Polymerisation}
+\begin{enumerate}[label=\alph*)]
+    %
+    % a)
+    \item Bekannte Polymerisation \\
+        \noindent
+        \begin{tabularx}{\linewidth}{|0l|0c|0c|>{\raggedright\arraybackslash\hspace{0pt}}X|}
+            Name & Monomer & Polymermolekül & Einsatzbeispiel\\
+            \hline
+            \makecell[cl]{Polyethen\\ (PE)} 
+                    & 
+                    \adjustbox{valign=c}{\chemfig{
+                        H
+                        -[1]C 
+                            (-[3]H)
+                        =C 
+                            ( -[1]H) 
+                        -[7]H
+                    }} &
+                    \schemestart
+                            \chemfig{
+                                -[@{upleft,0.5},1]C
+                                    ( -[2]H)
+                                    ( -[-2]H)
+                                -C
+                                    ( -[2]H)
+                                    ( -[-2]H)
+                                -[@{upright,0.5},1]
+                            }
+                            \polymerdelim[delimiters ={[]}, height = 45pt, depth = 40pt, indice = n]{upleft}{upright}
+                    \schemestop
+                    & Plastiktüten
+            \\
+            \makecell[cl]{Polypropen\\ (PP)} 
+                 & \adjustbox{valign=c}{\chemfig{
+                     H
+                     -C
+                        ( -[2]H)
+                        ( -[6]H)
+                    -C
+                        ( -[2]H)
+                    =C
+                        ( -[1]H)
+                        ( -[7]H)
+                 }} & 
+                 \schemestart
+                        \chemfig{
+                            -[@{upleft,0.5},1]C
+                                ( -[2]H)
+                                ( -[-2]H)
+                            -C
+                                ( -[2]{CH_3})
+                           -[@{right,0.5},1]
+                        }
+                        \polymerdelim[delimiters ={[]}, height = 45pt, depth = 40pt, indice = n]{upleft}{upright}
+                 \schemestop
+                 & Flaschendeckel, Brotdosen
+            \\
+            \makecell[cl]{Polyvinyl-\\chlorid\\ (PVC)}
+                & 
+                \adjustbox{valign=c}{\chemfig{
+                    H
+                    -[1]C
+                        ( -[3]H)
+                    =C
+                        ( -[1]Cl)
+                    -[7]H
+                }} & 
+                \schemestart
+                        \chemfig{
+                            -[@{upleft,0.5},1]C
+                                ( -[2]H)
+                                ( -[-2]H)
+                            -C
+                                ( -[6]H)
+                                ( -[2]{Cl})
+                            -[@{right,0.5},1]
+                        }
+                        \polymerdelim[delimiters ={[]}, height = 45pt, depth = 40pt, indice = n]{upleft}{upright}
+                \schemestop
+                & Rohrleitungen, Vinylböden, Schallplatten
+            \\ 
+            \makecell[cl]{Polytetra-\\fluorethen\\ (PTFE)} 
+                & 
+                \adjustbox{valign=c}{\chemfig{
+                    F
+                    -[1]C
+                        ( -[3]F)
+                    =C
+                        ( -[1]F)
+                    -[7]F
+                }}&
+                \schemestart
+                        \chemfig{
+                            -[@{upleft,0.5},1]C
+                                ( -[2]F)
+                                ( -[6]F)
+                            -C
+                                ( -[2]F)
+                                ( -[6]F)
+                            -[@{right,0.5},1]
+                        }
+                        \polymerdelim[delimiters ={[]}, height = 45pt, depth = 40pt, indice = n]{upleft}{upright}
+                \schemestop
+                & Pfannenbeschichtung (Teflon),
+                Funktionskleidung (Goretex) 
+        \end{tabularx}
+    %
+    % b)
+    \item \underline{Amorph Teilkristallin} \\
+        \begin{itemize}
+            \item Amorphe Kunststoffe: Glasartig, transparent
+            \item Teilkristalline Kunststoffe: Mechanisch Stabiler, nicht klar
+                durchsichtig (milchig), wärmebeständig
+        \end{itemize}
+        % Amorphe Zeichnung
+        \begin{figure}[ht]
+            \centering
+            \incfig{amorph_tteilkristallin_kristallin}
+            \caption{amorph-teilkristallin-kristallin-Eigenschaften-Pfeile}
+            \label{fig:amorph tteilkristallin kristallin}
+        \end{figure}
+    %
+    % c)
+    \item \underline{Weichmacher} \\
+        Kleine Moleküle die sich zwischen die Ketten einlagern können $
+        \rightarrow$ Mehr Abstand zwischen den Ketten $ \rightarrow$ Geringere
+        zwischenmolekulare Kräfte zwischen den Ketten $ \rightarrow$
+        Bessere Verschiebbarkeit der Ketten gegeneinander $ \rightarrow$
+        Kunststoff wird weicher
+
+        \underline{Problem:}\\
+        \begin{itemize}
+            \item Weichmachermoleküle können wieder leicht aus den Ketten
+                rausgehen: \\
+                %
+                Weichmachermoleküle können schädlich sein für Mensch
+                und Umwelt
+            \item Weichmacher wird spröder, weil der Weichmacher raus ist
+        \end{itemize}
+    %
+    % d)
+    \item \underline{Monomere mit konjugierten Doppelbindungen} \\
+        Bespiel:
+        \begin{align*}
+            \schemestart
+                \chemname{
+                    \chemfig{
+                        CH3
+                        -[1]{CH}
+                            ( -[1]H)
+                        =[7]C
+                            ( -[5]H)
+                            -[1]{CH3}
+                    }
+                }
+                {1,3 --- Butdien}
+            \schemestop
+        \end{align*}
+        %
+        \begin{align*}
+            \schemestart
+                n
+                \arrow{0}[,0]
+                \chemfig{
+                    H
+                    -[7]@{l1}C
+                        ( -[5]H)
+                    =[@{main1}0]@{r1}C
+                        ( -[1]H)
+                    -[7]@{l2}C
+                        ( -[5]H)
+                    =[@{main2}0]@{r2}C
+                        ( -[1]H)
+                    -[7]H
+                }
+                \arrow{->}
+                \chemfig{
+                    -[@{BL}0]C
+                		( -[2]H)
+                		( -[-2]H)
+                    -[0]C
+                        ( -[2]H)
+                    =[0]C
+                        ( -[2]H)
+                    -[0]C
+                   		( -[2]H)
+                   		( -[-2]H)
+                    -[@{BR}0]
+                }
+                \polymerdelim[delimiters={[]}, height=45pt, depth=40pt,
+                indice=n]{BL}{BR}
+            \schemestop
+            \chemmove {
+                \draw[shorten <= 5pt, shorten >= 5pt] (main1) .. controls
+                +(90:1cm) and +(180:1cm) .. (l1);
+                \draw[shorten <= 5pt, shorten >= 5pt] (main1) .. controls
+                +(90:1cm) and +(0:1cm) .. (r1);
+                \draw[shorten <= 5pt, shorten >= 5pt] (main2) .. controls
+                +(90:1cm) and +(180:1cm) .. (l2);
+                \draw[shorten <= 5pt, shorten >= 5pt] (main2) .. controls
+                +(90:1cm) and +(0:1cm) .. (r2);
+            }
+        \end{align*}
+        % But 1,3 ---- dien
+        Man spricht von einer 1,4 --- Verknüpfung. Es entsteht ein
+        ungesättigtes Polymer $ \rightarrow$ Weitere Vernutzung möglich zum
+        Elastomer oder Duroplast 
+        %
+        \begin{center}
+            06.10.2020
+        \end{center}
+        %
+        % Monomer und Polymer
+        \begin{align*}
+            % Monomer
+            \schemestart
+                \chemname{
+                    \chemfig{
+                        H
+                        -[7]C
+                            ( -[5]H)
+                        =C
+                            ( -[6]C
+                            	( -[8]H)
+                            	( -[6]H)
+                            	( -[4]H)
+                            )
+                        -[0]C
+                        	( =[1]\charge{90=\|, 0=\|}{O})
+                        	( -[-1]\charge{45=\|, -135=\|}{O}
+                                ( -[0]{CH3})
+                        	)
+                    }
+                }
+                {Monomer}
+            \schemestop
+        \end{align*}
+        \begin{align*}
+            % Polymer
+            \schemestart
+                \chemname{
+                    \chemfig{
+                        \ldots
+                        -[0]C
+                        	( -[2]H)
+                        	( -[-2]H)
+                        -C
+                            ( -[2]{CH3})
+                            (-[6]C
+                            	( =[7]\charge{405=\|, 315=\|}{O})
+                            	( -[5]\charge{360=\|, 180=\|}{O}
+                                    ( -[6]{CH3})
+                            	)
+                            )
+                        -[0]C
+                        	( -[2]H)
+                        	( -[-2]H)
+                        -C
+                            ( -[2]{CH3})
+                            (-[6]C
+                            	( =[7]\charge{405=\|, 315=\|}{O})
+                            	( -[5]\charge{360=\|, 180=\|}{O}
+                                    ( -[6]{CH3})
+                            	)
+                            )
+                        -[0]C
+                        	( -[2]H)
+                        	( -[-2]H)
+                        -C
+                            ( -[2]{CH3})
+                            (-[6]C
+                            	( =[7]\charge{405=\|, 315=\|}{O})
+                            	( -[5]\charge{360=\|, 180=\|}{O}
+                                    ( -[6]{CH3})
+                            	)
+                            )
+                    }
+                }
+                {Polymer}
+            \schemestop
+        \end{align*}
+        %
+        z.B. mit Styrol (Buna):
+        \begin{align*}
+            \schemestart
+                \chemfig{
+                    H
+                }
+            \schemestop
+        \end{align*}
+        Je nach vernetzungsgrad bildet sich ein Elastromer oder ein Duroplast.
+        \\
+        Naturkautschuk: \\
+        Polymer von Isopren
+        \begin{align*}
+            \schemestart
+                \chemfig{
+                    {H2C}
+                    =C
+                        ( -[2]{CH3})
+                    -{CH}
+                    ={CH3}
+                }
+            \schemestop
+        \end{align*}
+        Durch Vulkanisieren (Vernetzung durch Schwefelketten) ensteht Gummi.
+        %
+    \item Legosteine bestehen aus ABS (Acrylnitril - Butadienstyrol) \\
+        \begin{align*}
+            \schemestart
+                \chemname{
+                    \chemfig{
+                        H
+                        -[7]C
+                            (-[5]H)
+                        =C
+                            ( -[1]H)
+                        -[7]C
+                        ~\charge{0=\|}{N}
+                    }
+                }
+                {Acrylnitril}
+            \schemestop
+        \end{align*}
+        Polymere, die aus verschiedenen Monomeren aufgebaut sind, nennt man
+        Copolymere. Sie ermöglichen vielfältige Beeinflussung der Kunststoffe.
+\end{enumerate}
+%
+%
+% END
+\end{document}

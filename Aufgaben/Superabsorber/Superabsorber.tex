@@ -1,0 +1,133 @@
+\documentclass[../../main.tex]{subfiles}
+\begin{document}
+\subsection{Superabsorber}
+%
+% 1)
+\subsubsection{Was versteht man unter Polymerisation?}
+Bei einer \textit{Polymerisation} werden Moleküle mit einer Doppelbindung zu
+Makromolekülen, indem sie ihre Doppelbindung \say{aufgeben} und mit weiteren
+Molekülen zu größeren Molekülen werden.
+%
+% 2)
+\subsubsection{}
+Noch nicht gemacht
+%
+% 3)
+\subsubsection{Zeichne einen sinnvollen Strukturformelausschnitt des Superabsorbers mit bindenden und nichtbindenden Elektronenpaaren.}
+\begin{align*}
+    \schemestart
+        \chemfig{
+            \charge{180=\.}{C}
+                ( -[2]H)
+                ( -[6]H)
+            -[0]C
+                ( -[2]H)
+                ( -[6]O
+                % first carboxyl
+                    ( =[7]\charge{22.5=\|, -68.5=\|}{O})
+                    ( -[5]\charge{135=\|, -45=\|}{O}
+                        ( -[::0]H)
+                    )
+                )
+            -[0]C
+                ( =[2]\charge{45=\|, 135=\|}{O})
+            -[0]C
+                ( -[2]H)
+                ( -[6]H)
+            -[0]C
+                ( -[2]H)
+                % second carboxyl
+                ( -[6]C
+                    ( =[7]\charge{22.5=\|, -68.5=\|}{O})
+                    -[5]\charge{135=\|, 225=\|, 315=\|, 270:2.5mm=$\ominus$, 250:7mm=\ce{Na^{$\oplus$}}}{O}
+                )
+            -[0]C
+                ( -[2]H)
+                ( -[6]H)
+            % sub-connection, direction: Down
+            -[0]C
+                ( -[2]H)
+                % first C atom downstairs
+                ( -[6]C
+                    ( =[7]\charge{22.5=\|, -68.5=\|}{O})
+                    ( -[5]X
+                        -[6]C
+    		                ( -[8]H)
+    		                ( -[4]H)
+                        -[6]C
+    		                ( -[8]H)
+    		                ( -[4]H)
+                        -[6]C
+    		                ( -[8]H)
+    		                ( -[4]H)
+                        -[6]C
+    		                ( -[8]H)
+    		                ( -[4]H)
+                        -[6]C
+    		                ( -[8]H)
+    		                ( -[4]H)
+                        -[6]X
+                        -[7]C
+                            ( =[2]\charge{135=\|, 45=\|}{O})
+                        -C
+                            % second connection downstairs
+                            ( -[2]H)
+                            ( -[6]C
+                                ( -[0]H)
+                                ( -[4]H)
+                                -[6]\charge{0:1mm=\.}{C}
+                            		( -[4]H)
+                                -[6]C
+                            		( =[7]\charge{275=\|, 365=\|}{O})
+                            		( -[5]\charge{337=\|, 517=\|}{O}
+                                		( -[6]H)
+                            		)
+                            )
+                        % Connection to the right
+                        -[1]C
+                    		( -[2]H)
+                    		( -[-2]H)
+                        -[0]C
+                    		( -[2]H)
+                    		( -[-2]H)
+                        -[0]\charge{0:1mm=\.}{C}
+                            ( -[6]H)
+                        -[2]C
+                    		( =[3]\charge{95=\|, 185=\|}{O})
+                    		( -[1]\charge{157=\|, 337=\|}{O}
+                        		( -[2]H)
+                    		)
+                    )
+                )
+            -[0]C
+    		    ( -[2]H)
+    		    ( -[-2]H)
+            -[0]\charge{0:1mm=\.}{C}
+                ( -[2]H)
+                ( -[6]C
+    		        ( =[7]\charge{275=\|, 365=\|}{O})
+    		        ( -[5]\charge{337=\|, 517=\|}{O}
+        	        	( -[6]H)
+    		        )
+                )
+        }
+    \schemestop
+    \\
+\end{align*}
+\begin{center}
+    $X$ ist irgendein Molekül, wie zum Beispiel \ce{O} oder \ce{NH}.
+\end{center}
+% 4)
+\subsubsection{Was kannst du über den Vernetzungsgrad des Superabsorbers aussagen? In welche Kunststoffklasse kann man ihn einordnen?}
+Noch nicht gemacht
+% 5)
+\subsubsection{Erläutere mit Fachsprache, wie der neutrale pH-Wert zustande kommt. Wie nennt man ein solches System?}
+Die Acrylsäure besitzt eine Carboxylgruppe, die ein Proton abgeben kann und
+somit den pH-Wert senken lässt. Das Natriumcrylat besitzt ein Natrium, welches
+in der Lösung ein Proton aufnimmt, sodass der ph-Wert steigt. Da beide in die
+entgegengesetzte Richtung des pH-Wertes gehen, neutralisieren sie sich. So ein
+System nennt man \textit{Puffer-System}.
+%
+%
+% END
+\end{document}
