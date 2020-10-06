@@ -29,6 +29,7 @@
 \usepackage[column=0]{cellspace}
 \usepackage{makecell}
 \usepackage{adjustbox}
+\usepackage{tcolorbox}
 
 \usepackage{enumitem} % able to change the settings of enumerates/itemizes
 
@@ -43,6 +44,13 @@
 }
 
 \renewcommand{\tabularxcolumn}[1]{m{#1}}
+
+\newtcolorbox{merke}[1]{
+    colback = red!5!white,
+    colframe = red!75!black,
+    fonttitle = \bfseries,
+    title = #1
+}
 
 % -----------
 % Settings 
