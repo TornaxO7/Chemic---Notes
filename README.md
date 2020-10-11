@@ -63,15 +63,14 @@ Auch hier habe ich ein kleines Tutorial-GIF erstellt:
 
 ### Wie kann ich es verändern?
 
-Also wenn ihr diesen Weg wirklich nimmt, dann Respekt und vielen Dank! Hierfür würde ich euch
-aber [dieses Video](https://www.youtube.com/watch?v=_NrSWLQsDL4)
-empfehlen, um "herauszufinden" wie ihr mein Zeug verändern könnt. Die
+Ehre, dass ihr diesen Weg nehmen wollt :D. Vielen lieben dank!
+Also was nötig ist, wäre dieses Tutorial: [dieses Video](https://www.youtube.com/watch?v=_NrSWLQsDL4)
+Damit könnt ihr dann nämlich an den Dateien rumfummeln. Die
 Alternative wäre, dass ihr einfach einen Github-Account erstellt und ich euch
 dann "einlade", sodass ihr dann direkt die Änderungen vornehmen könnt (ich habe das
 jedoch nicht probiert und weiß daher nicht, ob das so klappen wird). In dem
 Video erklärt er das eigentlich sehr verständlich, wie ihr über den sogenannten
-"Fork" das Zeug verändert und dann "abschickt". Den Theorieteil könnt ihr
-eigentlich getrost ignorieren.
+"Fork" das Zeug verändert und dann "abschickt".
 
 ### Reinschreiben
 
@@ -88,3 +87,5 @@ beispielsweise verwenden könnte und weil ich in diesem Fall das Packet
 [chemfig](https://www.ctan.org/pkg/chemfig) für den Aufschrieb verwende, ist
 [hier](https://mirror.clientvps.com/CTAN/macros/generic/chemfig/chemfig-en.pdf)
 die Dokumentation dazu.
+Ihr könnt aber auch einfach direkt mit Notepad++ oder so in die Datei
+reinschreiben!
