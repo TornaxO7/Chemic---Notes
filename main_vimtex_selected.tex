@@ -14,18 +14,42 @@
 \usepackage{textcomp} 	% For arrow
 \usepackage[export]{adjustbox}[2011/08/13] 	% very big images
 \usepackage{subcaption} % for subfigures
+\usepackage{subfiles} % Split compilation on one file
 
 \usepackage{tocloft} 	% show dots in the table of contents
+\usepackage{import} % gilles castelli's neccessary packages for inkscape
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{xcolor} 
+\usepackage[version=4]{mhchem} % Chemic stuff
 \usepackage{chemfig} % Chemic structures
+\usepackage{dirtytalk} % Quoting
+
+\usepackage{tabularx} % Better tables
+\usepackage[column=0]{cellspace}
+\usepackage{makecell}
+\usepackage{adjustbox}
+\usepackage{tcolorbox}
+
+\usepackage{enumitem} % able to change the settings of enumerates/itemizes
 
 % -----------
 % commands
 % -----------
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+% Command to include image of inkscape
+\newcommand{\incfig}[2][1]{
+  \def\svgwidth{#1\columnwidth}
+}
 
-% ------------------
-%  own environments
-% ------------------
+\renewcommand{\tabularxcolumn}[1]{m{#1}}
+
+\newtcolorbox{merke}[1]{
+    colback = red!5!white,
+    colframe = red!75!black,
+    fonttitle = \bfseries,
+    title = #1
+}
 
 % -----------
 % Settings 
@@ -39,105 +63,23 @@
         includeheadfoot
 }
 
-\parskip5pt
-\parindent0pt
+\setlength\cellspacetoplimit{8pt}
+\setlength\cellspacebottomlimit{8pt}
 
-\begin{document}
-    \begin{align*}
-        %%% VIMTEX PLACEHOLDER
-    \end{align*}
-    \schemestart
-        \chemname{
-            \chemfig{[:90]
-                **6(
-                    -
-                        (-[0]C
-                        (=[2]\charge{45=\|,135=\|}{O})
-                            (-[0]\charge{90=\|,270=\|}{O}
-                                (-[0]\charge{90=\|,270=\|}{O}
-                                    (-[0]C
-                                        (=[2]\charge{45=\|,135=\|}{O})
-                                        (-**6(------))
-                                    )
-                                )
-                            )
-                        )
-                    -
-                    -
-                    -
-                    -
-                    -
-                )
-            }
-        }
-        {Dibenzoylperoxid}
-    \schemestop
-    \\
-    \schemestart[][west]
-        \arrow{->} 2 \hspace{1mm}
-    \schemestop
-    \schemestart[][west]
-        \chemfig{[:90]
-            **6(
-                -
-                    (-[0]C
-                        (=[2]\charge{45=\|, 135=\|}{O})
-                        (-[0]\charge{0=\., 90=\|, 270=\|}{O})
-                    )
-                -
-                -
-                -
-                -
-                -
-            )
-        }
-    \schemestop
-\documentclass[a4paper, 12pt]{scrartcl}
+\setcounter{section}{6}
 
-% -----------
-% Packages
-% -----------
-\usepackage[ngerman]{babel}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}				% west european chars
-\usepackage{amsmath, amsthm, amssymb} 	% math symbols
-\usepackage{geometry} 					% Ermöglicht die Formatierung des Seitenlayouts
-%\usepackage{showframe}
-%\usepackage{siunitx}	% simpler variables
-\usepackage{comment}  	% To comment out things
-\usepackage{textcomp} 	% For arrow
-\usepackage[export]{adjustbox}[2011/08/13] 	% very big images
-\usepackage{subcaption} % for subfigures
-
-\usepackage{tocloft} 	% show dots in the table of contents
-\usepackage{chemfig} % Chemic structures
-
-% -----------
-% commands
-% -----------
-\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
-
-% ------------------
-%  own environments
-% ------------------
-
-% -----------
-% Settings 
-% -----------
-% border on the side
-\geometry {
-        left = 2.5cm,
-        right = 2.5cm,
-        top = 1.0cm,
-        bottom = 0.5cm,
-        includeheadfoot
-}
+\title{Chemie Aufschriebe}
+\author{TornaxO7}
+\date{\today}
 
 \parskip5pt
 \parindent0pt
 
 \begin{document}
-    \begin{align*}
-        %%% VIMTEX PLACEHOLDER
-    \end{align*}
+\begin{itemize}
+    \item Sidet beim erhitzen (auch wenn die Flamme weggenommen wird)
+    \item Viskosität nimmt zu
+    \item Schäumt beim siden
+    \item aufsteigende Dämpfe, Kondensierun im Steigrohr
+\end{itemize}
 \end{document}

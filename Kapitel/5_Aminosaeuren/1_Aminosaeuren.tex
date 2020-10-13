@@ -1,0 +1,131 @@
+\documentclass[../../main.tex]{subfiles}
+\begin{document}
+Allgemeine Struktur:
+\begin{align*}
+    \schemestart
+        \chemname{
+            \chemfig{
+                C
+                	( =[3]\charge{180=\|, 90=\|}{O})
+                	( -[1]\charge{150=\|, -30=\|}{O}
+                		 ( -[2]H)
+                	)
+                -[6]C
+                    ( -[4]\charge{180=\|}{N}
+                        ( -[2]H)
+                        ( -[6]H)
+                    )
+                    ( -[0]H )
+                -[6]R
+            }
+        }
+        {L --- $\alpha$ --- Aminosäure}
+    \schemestop
+\end{align*}
+%------------------
+\subsection{Namensbedeutungen}
+Das $\alpha$ steht für die \textit{Carboxylgruppe am benachbartem C---Atom}.
+
+Aminosäuren liegen als \textbf{Zwitter} vor.
+\begin{itemize}
+    \item Durch \textbf{Carboxylgruppe}: Kann \textbf{Sauer (Protonendonator)}
+        reagieren.
+    \item Durch \textbf{Aminogruppe}: Kann \textbf{Basisch (Protonenakzeptor)}
+        reagieren.
+\end{itemize}
+Es bildet durch die beiden Gruppen eine \textbf{intramolekulare
+    Protonenwanderung}.
+
+%------------------
+\begin{tabularx}{\linewidth}{
+    |>{\centering\arraybackslash}X
+    |>{\centering\arraybackslash}X
+    |>{\centering\arraybackslash}X
+    |}
+    \hline
+    Kation
+    &
+    Zwitterion
+    &
+    Anion
+    \\ % ----------
+    \hline
+    \schemestart
+        \chemfig{
+            COOH
+            -[6]C
+                ( -[4]{\ce{H3N^{+}}} )
+                ( -[0]H )
+            -[6]H
+        }
+    \schemestop
+    &
+    \schemestart
+        \chemfig{
+            COO^{-}
+            -[6]C
+                ( -[4]{\ce{H3N^{+}}} )
+                ( -[0]H )
+            -[6]H
+        }
+    \schemestop
+    &
+    \schemestart
+        \chemfig{
+            COO^{-}
+            -[6]C
+                ( -[4]\ce{H2N} )
+                ( -[0]H )
+            -[6]H
+        }
+    \schemestop
+    \\
+    \hline
+\end{tabularx}
+%------------------
+
+Den pH---Wert, an dem die Aminosäuren hauptsächlich als Zwitterion vorliegen
+nennt man \textbf{isoelektrischen Punk (IEP)}.
+%
+\subsection{Peptidbindung}
+Bei einer Peptidbindung spalten sich ein Sauerstoff von der Carboxylgruppe und
+zwei Wasserstoff Atome von der Aminogruppe ab, sodass Wasser entsteht.
+Anschließend verbunden sie sich:
+\begin{align*}
+    \schemestart
+        \chemname{
+            \chemfig{
+                H
+                -\charge{45:5pt=$\oplus$}{N}
+                    ( -[2]H)
+                    ( -[6]H)
+                -[0]C
+                	( -[2]H)
+                	( -[-2]H)
+                -[0]C
+                	( =[1]\charge{90=\|, 0=\|}{O})
+                -[7]\charge{90=\|, 0=\|, -90=\|, 45:5pt=$\ominus$}{O}
+            }
+        }
+        {Glycin}
+        \+
+        \chemname{
+            \chemfig{
+                H
+                -N
+                    ( -[2]H)
+                    ( -[6]H)
+                -C
+                	( -[2]H)
+                    ( -[-2]{CH3})
+                -C
+                	( =[1]\charge{90=\|, 0=\|}{O})
+                -[7]\charge{90=\|, 0=\|, -90=\|, 45:5pt=$\ominus$}{O}
+            }
+        }
+        {Alanin}
+    \schemestop
+\end{align*}
+%
+% END
+\end{document}

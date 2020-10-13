@@ -1,0 +1,677 @@
+\documentclass[a4paper, 12pt]{scrartcl}
+
+% -----------
+% Packages
+% -----------
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}				% west european chars
+\usepackage{amsmath, amsthm, amssymb} 	% math symbols
+\usepackage{geometry} 					% Ermöglicht die Formatierung des Seitenlayouts
+%\usepackage{showframe}
+%\usepackage{siunitx}	% simpler variables
+\usepackage{comment}  	% To comment out things
+\usepackage{textcomp} 	% For arrow
+\usepackage[export]{adjustbox}[2011/08/13] 	% very big images
+\usepackage{subcaption} % for subfigures
+\usepackage[version=4]{mhchem} % Chemic stuff
+
+\usepackage{tocloft} 	% show dots in the table of contents
+\usepackage{chemfig} % Chemic structures
+\usepackage{tabularx}			  % Better tables 
+\usepackage[column=0]{cellspace}  % Adding horizontal/vertical space to cells
+\usepackage{makecell}			  % for creating cells with better customicing
+\usepackage{adjustbox}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{gensymb}
+
+% -----------
+% commands
+% -----------
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+\setlength\cellspacetoplimit{8pt}
+\setlength\cellspacebottomlimit{8pt}
+
+\renewcommand{\tabularxcolumn}[1]{m{#1}}
+
+\def\RED{\gdef\printatom##1{\color{red}\ensuremath{\mathrm{##1}}}}
+\def\BLUE{\gdef\printatom##1{\color{blue}\ensuremath{\mathrm{##1}}}}
+\def\BLACK{\gdef\printatom##1{\color{black}\ensuremath{\mathrm{##1}}}}
+
+% ------------------
+%  own environments
+% ------------------
+\newtcolorbox{merke}[1]{
+    colback = red!5!white,
+    colframe = red!75!black,
+    fonttitle = \bfseries,
+    title = #1
+}
+
+\newtcolorbox{Notiz}[1]{
+    colback = blue!5!white,
+    colframe = blue!75!black,
+    fonttitle = \bfseries,
+    title = #1
+}
+
+% -----------
+% Settings 
+% -----------
+% border on the side
+\geometry {
+        left = 2.5cm,
+        right = 2.5cm,
+        top = 1.0cm,
+        bottom = 0.5cm,
+        includeheadfoot
+}
+
+\title{Chemie --- Zusammenfassung}
+\author{TornaxO7}
+\date{\today}
+
+\parskip5pt
+\parindent0pt
+
+\begin{document}
+\maketitle
+\tableofcontents
+%------------------
+\section{}
+Allgemeine Struktur:
+\begin{align*}
+    \schemestart
+        \chemname{
+            \chemfig{
+                C
+                	( =[3]\charge{180=\|, 90=\|}{O})
+                	( -[1]\charge{150=\|, -30=\|}{O}
+                		 ( -[2]H)
+                	)
+                -[6]C
+                    ( -[4]\charge{180=\|}{N}
+                        ( -[2]H)
+                        ( -[6]H)
+                    )
+                    ( -[0]H )
+                -[6]R
+            }
+        }
+        {L --- $\alpha$ --- Aminosäure}
+    \schemestop
+\end{align*}
+%------------------
+\subsection{Aminosäuren}
+Das $\alpha$ steht für die \textit{Carboxylgruppe am benachbartem C---Atom}.
+
+Aminosäuren liegen als \textbf{Zwitter} vor.
+\begin{itemize}
+    \item Durch \textbf{Carboxylgruppe}: Kann \textbf{Sauer (Protonendonator)}
+        reagieren.
+    \item Durch \textbf{Aminogruppe}: Kann \textbf{Basisch (Protonenakzeptor)}
+        reagieren.
+\end{itemize}
+Es bildet durch die beiden Gruppen eine \textbf{intramolekulare
+    Protonenwanderung}.
+%------------------
+
+\begin{tabularx}{\linewidth}{
+	|>{\centering\arraybackslash\hspace{0pt}}X
+	|>{\centering\arraybackslash\hspace{0pt}}X
+	|>{\centering\arraybackslash\hspace{0pt}}X
+	|}
+	\hline
+    Kation
+    &
+    Zwitterion
+    &
+    Anion
+    \\ % ----------
+    \hline
+    \schemestart
+        \chemfig{
+            COOH
+            -[6]C
+                (-[4]H_{3}N^{+})
+                (-[0]H)
+            -[6]H
+        }
+    \schemestop
+    &
+    \schemestart
+        \chemfig{
+            COO^{-}
+            -[6]C
+                (-[4]H_{3}N^{+})
+                (-[0]H)
+            -[6]H
+        }
+    \schemestop
+    &
+    \schemestart
+        \chemfig{
+            COO^{-}
+            -[6]C
+                (-[4]H_{2}N)
+                (-[0]H)
+            -[6]H
+        }
+    \schemestop
+    \\ % ----------
+    \hline
+\end{tabularx}
+%------------------
+
+Den pH---Wert, an dem die Aminosäuren hauptsächlich als Zwitterion vorliegen
+nennt man \textbf{isoelektrischen Punk (IEP)}.
+%
+\subsection{Proteine}
+\subsubsection{Peptidbindung und Polypeptide}
+Bei einer Peptidbindung spalten sich ein Sauerstoff von der Carboxylgruppe und
+zwei Wasserstoff Atome von der Aminogruppe ab, sodass Wasser entsteht.
+Anschließend verbunden sie sich:
+\begin{align*}
+    \schemestart
+        \chemname{
+            \chemfig{
+                H
+                -\charge{45:5pt=$\oplus$}{N}
+                    ( -[2]H)
+                    ( -[6]H)
+                -[0]C
+                	( -[2]H)
+                	( -[-2]H)
+                -[0]C
+                	( =[1]\charge{90=\|, 0=\|}{O})
+                -[7]\charge{90=\|, 0=\|, -90=\|, 45:5pt=$\ominus$}{O}
+            }
+        }
+        {Glycin}
+        \+
+        \chemname{
+            \chemfig{
+                H
+                -N
+                    ( -[2]H)
+                    ( -[6]H)
+                -C
+                	( -[2]H)
+                    ( -[-2]{CH_{3}})
+                -C
+                	( =[1]\charge{90=\|, 0=\|}{O})
+                -[7]\charge{90=\|, 0=\|, -90=\|, 45:5pt=$\ominus$}{O}
+            }
+        }
+        {Alanin}
+    \schemestop
+\end{align*}
+\begin{align*}
+    \schemestart
+        \arrow{->}
+        \chemname{
+            \chemfig{
+                \BLUE H_{3}N^{+}\BLACK
+                -C
+                    ( -[2]H)
+                    ( -[-2]CH_{3})
+                -C
+                    ( =[2]\charge{135=\|, 45=\|}{O})
+                -\charge{90=\|}{N}
+                    ( -[-2]H)
+                -C
+                    ( -[2]H)
+                    ( -[-2]CH_{3})
+                -\RED COO^{-}\BLACK
+            }
+        }
+        {Gly --- Ala}
+    \schemestop
+\end{align*}
+\begin{itemize}
+    \item \textcolor{blue}{N --- Terminales Ende}
+    \item \textcolor{red}{C --- Terminales Ende}
+\end{itemize}
+Reaktionstyp heißt: \textbf{Kondensationsreaktion} (Wasser wird abgespalten.)\\
+\textbf{Polypeptide} sind zusammenverbundene \textbf{Peptidbindungen}.
+%------------------
+\subsubsection{Sekundär-, Tertiär- und Quartärstruktur}
+\begin{itemize}
+    \item \textbf{Primärstruktur}
+
+        Primärstruktur = Reihenfolge der einzelnen (durch Peptidbindung
+        verknüpften) Aminosäuren, die das Protein aufgbauen.
+
+    \item \textbf{Sekundärstruktur}
+
+        \begin{itemize}
+            \item beschreibt regelmäßig räumliche wiederholende \textbf{Strukturelemente}
+            \item Regelmäßigkeit entsteht durch Wasserstoffbrücken der 
+                \chemfig{
+                    C=O
+                }
+                und der
+                \chemfig{
+                    N-H
+                }
+                Gruppe.
+            \item Proteine besitzt viele \textit{Wasserstoffbrücken}\\
+                $ \rightarrow$ Starker Zusammenhalt im Molekül
+        \end{itemize}
+
+    \item \textbf{Tertiärstruktur}
+
+        Darstellung der \textbf{Wechselwirkungen} zwischen den
+        Aminosäureresten.\\
+        %
+        \textbf{Echte Bindungen:}
+        \begin{enumerate}
+            \item \textcolor{yellow}{Disulfidbrücken} (entstehen, wenn zwei
+                Cysteinreste miteinander reagieren)
+            \item \textcolor{blue}{Ionenbindung} zwischen funktionellen Gruppen
+        \end{enumerate}
+        %
+        \textbf{Zwischenmolekulare Kräfte}
+        \begin{enumerate}
+            \item \textcolor{red}{Wasserstoffbrücken}
+            \item \textcolor{gray}{Van --- der --- Waals --- Kräfte}
+        \end{enumerate}
+
+    \item \textbf{Quartärstruktur}
+
+        \begin{itemize}
+            \item Eine gemeinsame Funktionseinheit aus mehreren
+                Proteinmolekülen.
+            \item Gleiche Bindungskräfte wie bei der Tertiärstruktur halten
+                Proteinketten zusammen.
+        \end{itemize}
+\end{itemize}
+%------------------
+\subsubsection{$\alpha$ Helix und $\beta$ Faltblatt}
+\begin{itemize}
+    \item \textbf{$\alpha$ Helix}
+
+        \begin{itemize}
+            \item sehr große Aminosäureresten winden sich schraubenförmig um
+                seine Längenachse
+            \item Zusammenhalt der Schraubenform durch \textbf{intramolekulare Wasserstoffbrücken}
+            \item Windungen sind \textbf{rechtsgängig} (wie beim Korkenzieher)
+            \item Aminosäurereste weisen nach außen
+        \end{itemize}
+
+    \item \textbf{$\beta$ Faltblatt}
+
+        \begin{itemize}
+            \item beruht auf \textbf{intermolekulare Wasserstoffbrücken}
+                zwischen Proteinketten
+            \item Aminosäurereste abwechselnd unter- und oberhalb der
+                Peptidgruppenebene
+            \item $\alpha$-Helices und $\beta$-Faltblattstrukturen sind oft
+                Nebeneinander im Proteinmolekül.
+        \end{itemize}
+\end{itemize}
+\begin{merke}{\textbf{Intra}molekulare und \textbf{Inter}molekulare
+        Wasserstoffbrücken}
+    \begin{itemize}
+        \item \textbf{Intermolekular:}
+
+            Kräfte zwischen \textbf{Molekülen}.
+        \item \textbf{Intramolekular:}
+
+            Kräfte zwischen \textbf{Teilchen}
+    \end{itemize}
+\end{merke}
+%------------------
+\subsubsection{Zusammenhaltende Kräfte}
+\begin{itemize}
+    \item \textbf{Sekundärstruktur}: Durch \textbf{Disulfidbrücken}
+    \item \textbf{Tertiär- und Quartärstrukturen} durch
+        \textbf{Wasserstoffbrücken oder Ionen --- Bindung}
+\end{itemize}
+%------------------
+\subsubsection{Denauturierung}
+\underline{Allgemeine Definition:}
+
+Veränderung der Umgebungsbedingungen\\
+$ \rightarrow$ Umfaltungen\\
+$ \rightarrow$ Strukturänderungen\\
+$ \rightarrow$ Protein verändert sich und verliert seine Funktion. \textbf{Die
+    Strukturänderungen} können reversibel oder irreversibel sein.
+
+\subsubsection{Denauturierungsmechanismen}
+\begin{itemize}
+    \item \textbf{Erhitzen}
+
+        Wärmebewegung überwinden zwischenmolekulare Kräfte\\
+        $ \rightarrow$ Formieren sich neu.
+
+    \item \textbf{Alkohole, Gerbstoffe, inerte Salze}
+
+        Sekundär- und Quartärstrukturen werden aufgrund der Konkurrenz (mit
+        Alkoholen, Gerbstoffen, etc.) um Wasserstoffbrücken zerstört.
+        \begin{Notiz}{Konservierung}
+            Salz oder Alkohol kann zur konservierung von protonhaltigen Esswaren
+            verwendet werden. Mit Tannin kann man Leder gerben.
+        \end{Notiz}
+
+    \item \textbf{Änderung des ph --- Wertes}
+
+        Verhinderung von salzartigen Bindungen zwischen $\ce{NH3^{+}}$ - und
+        $\ce{COO^{-}}$ - Resten
+
+    \item \textbf{Fällung durch Schwermetall --- Ionen (Tertiärstruktur)}
+
+        Vor allem betroffen sind: \textbf{Schwefel --- und Stickstoffhaltige
+            funktionelle Gruppen}. Durch mehrwertige Metall --- Ionen entstehen
+        \textbf{Quervernetzungen} zwischen verschiedenen Proteinmolekülen und
+        damit zur Ausflockung.
+
+    \item \textbf{Fällung durch Tenside}
+
+        Grenzflächende Substanzen stören die apolaren Bindungen im Protein
+
+    \item \textbf{Salze}
+
+        Verlust der Hydrathülle (Anlagerungen von Wassermolekülen)
+
+    \item \textbf{Radioaktive Strahlung}
+\end{itemize}
+
+\subsubsection{Proteinnachweis}
+\begin{itemize}
+    \item \textbf{Farbreaktion (am wichtigsten)}
+
+        \underline{Stichwort:} \textbf{Biuretreaktion}\\
+        \underline{Vorgang:} Alkalische Eiweißlösung + Kupfer(||)-sulfat-Lösung
+        $ \rightarrow$ violettte Lösung.
+
+    \item \textbf{Xanthoproteinreaktion}
+
+        Eiweiß + Salpetersäure $ \rightarrow$ Gelbfärbung
+\end{itemize}
+
+%------------------
+\subsection{Enzyme}
+\subsubsection{Schlüssel --- Schloss --- Prinzip}
+\begin{itemize}
+    \item Chemische Reaktionen findem im \textbf{aktivem Zentrum} statt.
+    \item Verbindung zwischen Substrat und Enzym: \textbf{Enzym --- Substrat ---
+            Komplex}
+    \item Enzyme reagieren auf \textbf{ein ganz bestimmtes Substrat}
+    \item Reaktionsname zwischen Enzym und Substrat: \textbf{Schlüssel ---
+            Schloss --- Prinzip} $ \rightarrow$ Eigenschaftsname:
+        \textbf{Substratspezifität}
+\end{itemize}
+
+\subsubsection{Beeinflussung der Katalyseaktivität}
+\begin{enumerate}
+    \item \textbf{Abhängigkeit der Temperatur}
+
+        \textbf{Denauturierung} bei über $40\degree C$.
+
+    \item \textbf{Abhängigkeit vom pH --- Wert}
+
+        \textbf{Tertiärstruktur} hängt von sauren und alkalischen
+        Aminosäurebausteinen ab. \\
+        Zugabe von $\ce{H3O^{+}_{(aq)}}$ oder $\ce{OH^{-}_{(aq)}}$ \\
+        $\rightarrow$ Ionenbindungen werden gestört \\
+        $ \rightarrow$ damit auch das \textbf{aktive Zentrum}
+
+    \item \textbf{Abhängigkeit der Konzentration}
+
+        \begin{itemize}
+            \item \textbf{Substratsättigung:} Alle Enzyme sind beschäftigt \\
+                $\rightarrow$ Erhöhung der Substratkonzentration \\
+                $ \rightarrow$ kein Anstieg der Reaktionsgeschwindigkeit
+            \item \textbf{Substrathemmung:} Zu viele Substatmoleküle lagern sich
+                am aktivem Zentrum \\
+                $ \rightarrow$ Verlangsamung
+        \end{itemize}
+\end{enumerate}
+%------------------
+\subsection{DNA}
+\subsubsection{Allgemein}
+\begin{itemize}
+    \item Speichert die Erbinfo im Zellkern
+    \item Nukleotid: Desoxyribose + \ce{PO4} + Base
+    \item Nukleosid: Desoxyribose + Base
+    \item Nukleotidsequenz: Ist in der m-RNA; Der genetische Code
+    \item Gen: Eine Informationseinheit in einem Abschnitt eines DNA-Moleküls
+    \item Genetischer Code:
+        \begin{itemize}
+            \item Abfolge von drei Nucleotiden codiert eine bestimme Aminosäure
+            \item $4^{3} = 64$ Codeworte
+            \item Die meisten Aminosäuren besitzen mehrere Codeworte
+        \end{itemize}
+    \item Basenpaare: A + T, C + G
+\end{itemize}
+%
+Mithilfe des Strickleitermodels:
+\begin{itemize}
+    \item Holmen (die Seitensträngen): Abwechselnde \textbf{Desoxyribose-} und
+        \textbf{Phosphorsäureeinheiten} \\
+        $ \rightarrow$ Esterbindungen
+    \item Sprossen: Basenpaare (Adenin, Cytosin, Guanin und Thymin) \\
+        $ \rightarrow$ Wasserstoffbrücken
+\end{itemize}
+
+\subsubsection{Strukturformeln (auswendig können)}
+\begin{align*}
+    \schemestart
+        \chemname{
+            \chemfig{
+                H
+                -\charge{90=\|, -90=\|}{O}
+                -P
+                    (-[6]\charge{0=\|, 180=\|}{O}
+                        -[6]H
+                    )
+                    (=[2]\charge{135=\|, 45=\|}{O})
+                -\charge{90=\|, -90=\|}{O}
+                -H
+            }
+        }
+    {Phosphorsäure ($\ce{H3PO4}$)}
+    \chemname{
+        \chemfig[cram width=4pt]{
+            H
+            -\charge{90=\|, -90=\|}{O}
+            -C
+                (-[2]H)
+                (-H)
+            -[-2]C?
+                (-[-2]H)
+            <[7,1.5]C
+                (-[2]H)
+                ( -[-2]\charge{180=\|, 0=\|}{O} 
+                    (-[-2]H)
+                )
+            -[,1.5,,,line width=4pt]C
+                (-[2]H)
+                (-[-2]\charge{0=\|, 180=\|}{O}
+                    (-[-2]H)
+                )
+            >[1,1.5]C
+                (-[-2]H)
+                ( -[2]\charge{180=\|, 0=\|}{O}
+                    (-[2]H)
+                )
+            -[:150,2]\charge{45=\|, 135=\|}{O}?
+        }
+    }
+    {$\beta$ --- D --- Ribose}
+    \schemestop
+\end{align*}
+\begin{align*}
+    \schemestart
+        \chemname{
+        \chemfig[cram width=4pt]{
+            H
+            -\charge{90=\|, -90=\|}{O}
+            -C
+                (-[2]H)
+                (-H)
+            -[-2]C?
+                (-[-2]H)
+            <[7,1.5]C
+                (-[2]H)
+                ( -[-2]\charge{180=\|, 0=\|}{O} 
+                    (-[-2]H)
+                )
+            -[,1.5,,,line width=4pt]C
+                (-[2]H)
+                (-[-2]H)
+            >[1,1.5]C
+                (-[-2]H)
+                ( -[2]\charge{180=\|, 0=\|}{O}
+                    (-[2]H)
+                )
+            -[:150,2]\charge{45=\|, 135=\|}{O}?
+        }
+    }
+    {$\beta$ --- D --- 2 --- Desoxyribose}
+    \schemestop
+\end{align*}
+%
+\subsubsection{Verknüpfungen}
+\begin{itemize}
+    \item Phosphorsäure mit $\beta$ --- D --- 2 --- Desoxyriboset\\
+        $ \rightarrow$ \textbf{Veresterung}
+    \item $\beta$ --- D --- 2 --- Desoxyriboset mit einer Base\\
+        $ \rightarrow$ \textbf{Kondensationsreaktion}
+    \item zwischen zwei Basen\\
+        $ \rightarrow$ \textbf{Wasserstoffbrücken}
+\end{itemize}
+%------------------
+\subsection{Aromaten}
+\subsubsection{Benzol}
+Eigenschaften:
+\begin{itemize}
+    \item Wasserklar
+    \item leicht beweglich
+    \item stark lichtbrechend
+    \item Siedetemperatur: $80{,}1\degree C$
+    \item Fest bei $5{,}5\degree C$
+    \item Dichte: $0{,}875 \frac{g}{cm^{3}}$
+    \item Hydrophob
+    \item Hydrophobil (liebt Hydrophobe Stoffe)
+    \item brennt mit leuchtend, stark rußender Flamme
+\end{itemize}
+%
+Gesundheitsproblematik: 
+\begin{itemize}
+    \item Ist giftig und Krebserregend
+    \item schädigt Leber und Knochenmark
+    \item Kann Leukämie auslösen
+\end{itemize}
+%
+Vorkommen:
+\begin{itemize}
+    \item Nebenprodukt beim Verkoken von Steinkohle
+\end{itemize}
+%
+Verwendung:
+\begin{itemize}
+    \item Aufheizen von Kokskammern
+    \item In Steinkohleteer
+\end{itemize}
+%
+Kekule und Entdeckung des Benzol:
+\begin{itemize}
+    \item Damals in Glaslaternen, Rest: Öliges Kondensat
+    \item Faraday erkennt 1:1 Gemisch zwischen C und H
+    \item Keine Isomere von Benzol $ \rightarrow$ Kekules Strukturformel setzt
+        sich durch.
+\end{itemize}
+%
+Reaktion von Benzol mit Brom im Verglelich zur Reaktion mit Alkenen:
+
+\textbf{Substitution:}
+\begin{align*}
+    \schemestart
+        \chemfig{
+            \ldots
+            -C
+                (-[2]H)
+            	(-[-2]H)
+            -C
+                (-[2]H)
+            	(-[-2]H)
+            -\Charge{180=$\, \ldots$}{\vphantom{C}}
+        }
+        \+
+        \ce{Br2}
+        \arrow{->[Licht]}
+        \chemfig{
+            \ldots
+            -C
+                ( -[2]{Br})
+            	( -[-2]H)
+            -C
+            	( -[2]H)
+            	( -[-2]H)
+            -\Charge{180=$\, \ldots$}{\vphantom{C}}
+        }
+        \+
+        \chemfig{
+            H
+            -\charge{90=\|, 0=\|, -90=\|}{\ce{Br}}
+        }
+    \schemestop
+\end{align*}
+%
+\textbf{Addition}
+\begin{align*}
+    \schemestart
+        \chemfig{
+            R
+            -[7]C
+                (-[5]R)
+            =C
+                (-[1]R)
+            -[7]R
+        }
+        \arrow{0}[,0]
+        \+
+        \ce{Br2}
+        \arrow{->[Licht]}
+        \chemfig{
+            R
+            -C
+                (-[2]\charge{180=\|, 90=\|, 0=\|}{Br})
+                (-[-2]R)
+            -C
+                (-[2]\charge{180=\|, 90=\|, 0=\|}{Br})
+                (-[-2]R)
+            -R
+        }
+    \schemestop
+\end{align*}
+%
+\subsubsection{Mesomerie}
+Allgemein:
+\begin{itemize}
+    \item Elektronen sind delokalisiert
+    \item Delokalisierung ist ein konstanter Dauerzustand
+    \item Ist planar, regelmäßiges Sechseck
+    \item Bindungsverhältnisse:
+        \begin{itemize}
+            \item Einfachbindungen zwischen \chemfig{
+                H - C
+            }
+            \item 6 delokalisierte Elektronen
+        \end{itemize}
+\end{itemize}
+%
+\textbf{Mesomerieenergie:} \\
+Der Energiebetrag, wo ein reales Benzolmolekül stabiler ist, als eine
+Grenzformel.
+
+\textbf{Mesomeriestabilität}:\\
+Teilchen mit delokalisierten Elektronen sind mesomeriestabilisiert.
+
+Wichtige weitere Aromaten unter dem AB: \textbf{Weitere Aromaten: Bedeutung und
+    Benennung}
+\end{document}
