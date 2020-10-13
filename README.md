@@ -19,6 +19,10 @@ Ignoriert die anderen PDF-Dateien. Die sind nur Einzelstücke von der `main.pdf`
 Wer's nicht finden konnte, hier ein GIF:
 ![PDF_download](PDF_download.gif)
 
+### Hast du auch eine ABI-Zusammenfassung?
+"Jein", die wird noch gemacht. Die könnt ihr aber unter
+`Abi_Zusammenfassung/main.pdf` anschauen und herunterladen.
+
 ### Alles herunterladen
 
 Hier die Anleitung in Worten:
