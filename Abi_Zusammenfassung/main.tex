@@ -708,6 +708,7 @@ Struktureformeln zu a) und b):
 
         Möglichkeit 1: Hydroxycarbonsäure\\
         z.B.:
+		\\
         \schemestart
             n
             \chemfig{
@@ -725,15 +726,13 @@ Struktureformeln zu a) und b):
         \arrow{->}
         \ldots
         \chemfig{
-            -[@l]
-            -\charge{90=\|, -90=\|}{O}
+            -[@l]\charge{90=\|, -90=\|}{O}
             -[0]C
             	( -[2]H)
             	( -[-2]H)
             -C
-                ( =[2]\charge{135=\|, 45=\|}{O}))
-            -
-            -[@r]
+                ( =[2]\charge{135=\|, 45=\|}{O})
+            -[@r]\Charge{0=$\ldots$}{\vphantom{C}}
         }
         \polymerdelim[delimiters={[]}, height=45pt, depth=40pt, indice=n]{l}{r}
         \schemestop
