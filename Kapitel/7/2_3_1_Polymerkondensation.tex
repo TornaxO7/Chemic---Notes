@@ -112,14 +112,242 @@ Struktureformeln zu a) und b):
                     -\charge{90=\|, -90=\|}{O}
                     -[@r]
                 }
-                \polymerdelim[delimiters={[]}, height=45pt, depth=120pt, indice=n]{l}{r} 
+                \polymerdelim[delimiters={[]}, height=45pt, depth=45pt, indice=n]{l}{r} 
                 \arrow{0}[,0]
                 \+
                 2n
                 \ce{H2O}
             \schemestop
         \end{align*}
+    \item 
+        \begin{align*}
+            \schemestart
+                n
+                \chemfig{
+                    H
+                    -[-1]\charge{45=\|, -135=\|}{O}
+                    -[-1]C
+                        (=[1]\charge{135=\|, -45=\|}{O})
+                    -[6]C
+                    	( -[0]\charge{90=\|, -90=\|}{O}
+                            (-H)
+                        )
+                    	( -[4]H)
+                    -[6]C
+                    	(-[8]H)
+                    	(-[6]H)
+                    	(-[4]H)
+                }
+                \arrow{->}
+                \chemfig{
+                    -[@l]C
+                        (=[2]\charge{135=\|, 45=\|}{O})
+                    -[0]C
+                    	( -[2]H)
+                    	( -[-2]{\ce{CH3}})
+                    -\charge{90=\|, -90=\|}{O}
+                    -[@r]
+                }
+                \polymerdelim[delimiters={[]}, height=45pt, depth=45pt, indice=n]{l}{r} 
+                \+
+                n \ce{H2O}
+            \schemestop
+        \end{align*}
+
+    \item Polyamid (PA)
+
+        \underline{Versuch:} Herstellung von Nylon
+
+        Lösung A:
+        \begin{itemize}
+            \item $2{,}2g$ 1,6 -- Diaminohexan und
+            \item $1g$ \ce{NaOH} in $50ml$ Wasser
+        \end{itemize}
+
+        Lösung B:
+        \begin{itemize}
+            \item $1{,}5 ml$ Dekansäuredichlorid
+            \item in $50ml$ Heptan
+        \end{itemize}
+
+        Lösung A wird mit Lösung B überschichtet.
+
+        Mit einer Pinzette lässt sich Grenzschicht als Faden herausziehen.
+
+        \underline{(1. Möglichkeit) Erklärung:}
+
+        Aus Diamin und Dicarbonsäure bzw. Dicarbonsäurechlorid entsteht ein
+        Polyamid:
+
+        \begin{align*}
+            \schemestart
+                \arrow{0}[0,0]
+                \chemfig{
+                    \charge{135=\|, -135=\|, -45=\|}{\ce{Cl}}
+                    -[1]C
+                        (=[3]\charge{180=\|, 90=\|}{O})
+                    -[@l]{\ce{CH2}}
+                    -[@r]C
+                        (=[1]\charge{90=\|, 0=\|}{O})
+                    -[-1]\charge{45=\|, -45=\|, -135=\|}{\ce{Cl}}
+                }
+                \polymerdelim[delimiters={()}, indice=8]{l}{r} 
+                \arrow{0}[0,0]
+                \+
+                n
+                \chemfig{
+                    H
+                    -\charge{90=\|}{N}
+                        (-[-2]H)
+                    -{\ce{CH2}}
+                    -[@l]{\ce{CH2}}
+                    -[@r]{\ce{CH2}}
+                    -\charge{90=\|}{N}
+                        (-[-2]H)
+                    -H
+                }
+                \polymerdelim[delimiters={()}, height=15pt, depth=15pt, indice=4]{l}{r} 
+            \schemestop
+            \\
+            \\
+            \schemestart
+                \arrow{->}
+                \chemfig{
+                    -[@l]C
+                        (=[2]\charge{135=\|, 45=\|}{O})
+                    -[@{l2}]{\ce{CH2}}
+                    -[@{r2}]C
+                        (=[2]\charge{135=\|, 45=\|}{O})
+                    -\charge{90=\|}{N}
+                        (-[-2]H)
+                    -[@{l3}]{\ce{CH2}}
+                    -[@{r3}]\charge{90=\|}{N}
+                        (-[-2]H)
+                    -[@r]
+                }
+                \polymerdelim[delimiters={[]}, height=45pt, depth=45pt, indice=n]{l}{r} 
+                \polymerdelim[delimiters={()}, indice=8]{l2}{r2} 
+                \polymerdelim[delimiters={()}, indice=6]{l3}{r3} 
+                \+
+                2n \ce{HCL_{(aq)}}
+            \schemestop
+        \end{align*}
+        Hier ist eine Aminogruppe, weil dort eine Peptidbindung ist!
+
+        \underline{2. Möglichkeit der Polyamidsynthese: Aminosäuren}
+
+        Technisch meist: Aminoruppe und Carboxylgruppe endständig.
+
+        Variante: Vorgelagerte intramolekulare Kondenstationsreakion.
+
+        Beispiel: Perlon
+        \begin{align*}
+            \schemestart
+                n
+                \chemfig{
+                    H
+                    -\charge{90=\|}{N}
+                        (-[-2]H)
+                    -[@l]{\ce{CH2}}
+                    -[@r]C
+                    	(=[1]\charge{90=\|, 0=\|}{O})
+                    	(-[-1]\charge{60=\|, -120=\|}{O}
+                    		 ( -[0]H)
+                    	)
+                }
+                \polymerdelim[delimiters={()}, height=15pt, depth=15pt, indice=5]{l}{r} 
+                \arrow{<=>}
+            \schemestop
+            \\
+            \\
+            \schemestart
+                n
+                \arrow{0}[0,0]
+                \hspace{0.5cm}
+                \chemfig{
+                    [:180]
+                    \ce{CH2}*7(
+                    -\ce{CH2}
+                    -\ce{CH2}
+                    -\charge{0=\|}{N}
+                        (-[4]H)
+                    -C
+                        (=[1]\charge{90=\|, 0=\|}{O})
+                    -\ce{CH2}
+                    -\ce{CH2}
+                    -\ce{CH2}
+                    )
+                }
+                \arrow{0}[0,0]
+                \+
+                n
+                \hspace{0.25cm}
+                \ce{H2O_{(aq)}}
+                \arrow{->}
+                \chemname{
+                    \chemfig{
+                        -[@l]\charge{90=\|}{N}
+                            (-[6]H)
+                        -[@{l2}]\ce{CH2}
+                        -[@{r2}]C
+                            (=[2]\charge{135=\|, 45=\|}{O})
+                        -[@r]
+                    }
+                    \polymerdelim[delimiters={[]}, height=45pt, depth=45pt, indice=n]{l}{r} 
+                }
+                {Perlon}
+            \schemestop
+        \end{align*}
 \end{enumerate}
+
+%SUBFILE
+
+\subsubsection{Beeinflussung des Kunststofftyps der Polykondensation}
+\begin{itemize}
+    \item \textbf{Thermoplast}:
+
+        Bei Difunktionellen Monomeren entstehen lineare Ketten also eine
+        Thermoplast.
+        \begin{itemize}
+            \item Variante 1: Eine Hydroxycarbonsäure
+            \item Variante 2: Dicarbonsäure und Dialkohol
+
+                \underline{Nachteil (zur Variante 2):}
+
+                Genaues abgestimmes Verhältnis erforderlich! Denn ansonsten
+                würden nur kurze Ketten entstehen.
+        \end{itemize}
+
+    \item \textbf{Elastomer} und \textbf{Duroplast}:
+
+        Durch Beimischung von trinofunktionellen Monomere ergibt sich eine
+        Vernetzung und je nach Menge der trinofunktionellen Monomere ein
+        \textit{Elastomer} oder ein \textit{Duroplast}.
+\end{itemize}
+
+Verwendet man zur Polykondensation ungesättigte Verbindungen (Verbindungen
+mit einer Doppelbindung) wie:
+\begin{align*}
+    \chemname{
+        \chemfig{
+            H
+            -\charge{90=\|, -90=\|}{O}
+            -C
+                (-[2]H)
+            =C
+                (-[-2]H)
+            -C
+            	(=[1]\charge{90=\|, 0=\|}{O})
+            	(-[-1]\charge{60=\|, -120=\|}{O}
+            		 ( -[0]H)
+            	)
+        }
+    }
+    {3 -- Hydroxypropensäure}
+\end{align*}
+so kann man den entstehenden Thermoplastischen Polyester anschließend durch
+Polymerisation zum Duroplast vernetzen. Sowas nennt man auch
+\textit{Polyesterharz}.
 %
 %
 % END

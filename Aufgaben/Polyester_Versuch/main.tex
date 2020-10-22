@@ -96,6 +96,139 @@
     {Ein Duroplast}
     \schemestop
 \end{align*}
+%------------------
+\underline{c1}
+\begin{align*}
+    \schemestart
+        n
+        \arrow{,0}[0,0]
+        \chemfig{
+            H
+            -[-1]\charge{45=\|, -135=\|}{O}
+            -[-1]C
+                (=[1]\charge{135=\|, -45=\|}{O})
+            -[6]C
+            	( -[0]\charge{90=\|, -90=\|}{O}
+                    (-H)
+                )
+            	( -[4]H)
+            -[6]C
+            	(-[8]H)
+            	(-[6]H)
+            	(-[4]H)
+        }
+        \arrow{->}
+        \arrow{,0}[0,0]
+        \chemname{
+            \chemfig{
+                -[@l]C
+                    (=[2]\charge{135=\|, 45=\|}{O})
+                -[0]C
+                	( -[2]H)
+                	( -[-2]{\ce{CH3}})
+                -\charge{90=\|, -90=\|}{O}
+                -[@r]
+            }
+            \polymerdelim[delimiters={[]}, height=45pt, depth=45pt, indice=n]{l}{r} 
+        }
+        {Polymilchsäure}
+        \+
+        n \ce{H2O}
+    \schemestop
+\end{align*}
+%------------------
+\underline{c2}
+\begin{align*}
+    \schemestart
+        \chemfig{
+            C
+            	(=[5]\charge{270=\|, 180=\|}{O})
+            	(-[3]\charge{240=\|, 60=\|}{O}
+            		 ( -[4]H)
+            	)
+            -C
+            	( -[2]{OH})
+            	( -[-2]H)
+            -C
+            	( -[2]H)
+            	( -[-2]H)
+            -C
+            	(=[1]\charge{90=\|, 0=\|}{O})
+            	(-[-1]\charge{60=\|, -120=\|}{O}
+            		 ( -[0]H)
+            	)
+        }
+    \schemestop
+    \text{und}
+    \hspace{1cm}
+    \schemestart
+        \chemfig{
+            {H2C}
+                (-[-2]{OH})
+            -{CH}
+                (-[-2]{OH})
+            -{CH2}
+                (-[-2]{OH})
+        }
+    \schemestop
+    \\
+    \\
+    \schemestart
+        \text{ergibt}
+        \hspace{1cm}
+        \chemfig{
+            \ldots
+            -[@l]C
+                (=[2]\charge{135=\|, 45=\|}{O})
+            -C
+            	( -[2]H)
+            	( -[-2]\charge{0=\|, 180=\|}{O}
+                    (-[-2]\vdots)
+                )
+            -[0]C
+            	( -[2]H)
+            	( -[-2]H)
+            -C
+                (=[2]\charge{135=\|, 45=\|}{O})
+            -\charge{90=\|, -90=\|}{O}
+            -[0]C
+            	( -[2]H)
+            	( -[-2]H)
+            -C
+            	( -[2]H)
+            	( -[-2]\charge{0=\|, 180=\|}{O}
+                    (-[-2]\vdots)
+                )
+            -C
+                (=[2]\charge{135=\|, 45=\|}{O})
+            -[@r]\Charge{0=$\ldots$}{\vphantom{C}}
+        }
+        \polymerdelim[delimiters={[]}, height=45pt, depth=45pt, indice=n]{l}{r} 
+    \schemestop
+\end{align*}
+Es ist dort kein Reaktionspfeil, weil es zu viele kombinationsmöglichkeiten
+gibt und wir deswegen nur ein einzelnes Beispiel genommen haben.
+
+\underline{c3}
+\begin{align*}
+    \schemestart
+        \chemname{
+            \chemfig{
+                {H2C}
+                    (-[-2]{COOH})
+                -[,2]{CH}
+                    (-[-2]{COOH})
+                -[,2]{CH}
+                    (-[2]{OH})
+                    (-[-2]{COOH})
+            }
+        }
+        {Zitronensäure}
+    \schemestop
+\end{align*}
+Da wir 3 Carboxylgruppen und nur \textit{eine} Hydroxygruppe, können nur kurze
+Ketten entstehen da nicht alle Carboxylgruppen eine Verbindung eingehen können
+(weil wir nur eine Hydroxygruppe haben).
 %
 %
 % END
