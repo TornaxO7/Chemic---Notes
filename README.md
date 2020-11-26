@@ -2,6 +2,11 @@
 
 ## This repo includes my chemic notes for my classmates (from germany) so I won't translate it into another language, sorry.
 
+# Wichtig für meine Mitschüler
+Ich werde eigentlich nur noch die Zusammenfassung digital verfassen. Sorry, aber
+es lohnt sich aber nicht so arg für mich, alles so aufzuschreiben. Die
+Zusammenfassung passt aber :)
+
 #### Wo ist die Datei? (Dein "Aufschrieb")
 
 Die Datei die ihr sucht, heißt `main.pdf`.
@@ -9,9 +14,11 @@ Die Datei die ihr sucht, heißt `main.pdf`.
 ## Wie kann ich mir dein Zeug herunterladen?
 
 ### Hinweis
+
 Ignoriert die anderen PDF-Dateien. Die sind nur Einzelstücke von der `main.pdf`.
 
 ### Nur die PDF
+
 1. Auf die `main.pdf` draufdrücken.
 2. Ein bisschen oben rechts sollte der Button `Download` sein. Da einfach
    draufdrücken und herunterladen.
@@ -20,6 +27,7 @@ Wer's nicht finden konnte, hier ein GIF:
 ![PDF_download](PDF_download.gif)
 
 ### Hast du auch eine ABI-Zusammenfassung?
+
 "Jein", die wird noch gemacht. Die könnt ihr aber unter
 `Abi_Zusammenfassung/main.pdf` anschauen und herunterladen.
 
